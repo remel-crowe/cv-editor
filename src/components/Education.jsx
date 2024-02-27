@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Education.scss";
 
 function Education({ education, setEducation }) {
   const [newEdu, setNewEdu] = useState({
@@ -26,7 +27,7 @@ function Education({ education, setEducation }) {
   };
 
   return (
-    <div>
+    <div className="education_container">
       <form>
         <input
           type="text"

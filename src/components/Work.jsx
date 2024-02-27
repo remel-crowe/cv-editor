@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
+import "./Work.scss";
 function Work({ work, setWork }) {
   const [newWork, setNewWork] = useState({
     company: "",
     position: "",
+    duties: "",
     startDate: "",
     endDate: "",
   });
@@ -22,13 +23,14 @@ function Work({ work, setWork }) {
     setNewWork({
       company: "",
       position: "",
+      duties: "",
       startDate: "",
       endDate: "",
     });
   };
 
   return (
-    <div>
+    <div className="work_container">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -44,21 +46,35 @@ function Work({ work, setWork }) {
           value={newWork.position}
           onChange={handleInputChange}
         />
-        <label htmlFor="startDate">Start Date:</label>
-        <input
-          type="date"
-          id="startDate"
-          value={newWork.startDate}
+        <textarea
+          type="text"
+          id="duties"
           onChange={handleInputChange}
+          value={newWork.duties}
+          placeholder="Summary"
         />
-        <label htmlFor="endDate">End Date:</label>
-        <input
-          type="date"
-          id="endDate"
-          value={newWork.endDate}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Add Work</button>
+        <div className="date_container">
+          <label className="date" htmlFor="startDate">
+            Start Date:{" "}
+          </label>
+          <input
+            type="date"
+            id="startDate"
+            value={newWork.startDate}
+            onChange={handleInputChange}
+          />
+          <label className="date" htmlFor="endDate">
+            End Date:{" "}
+          </label>
+          <input
+            type="date"
+            id="endDate"
+            value={newWork.endDate}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <button type="submit">Add Work+</button>
       </form>
     </div>
   );

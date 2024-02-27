@@ -1,0 +1,24 @@
+.general_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & > input {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    & > #profile {
+        height: 100px;
+        text-align: left;
+    }
+}
+
+.general_container .personal {
+    display: flex;
+    gap: 10px;
+    & > input {
+        font-size: 1rem;
+        padding: 5px 5px;
+    } 
+}

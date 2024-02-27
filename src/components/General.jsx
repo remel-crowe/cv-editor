@@ -1,3 +1,4 @@
+import "./General.scss";
 function General({ formData, setFormData }) {
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -7,14 +8,30 @@ function General({ formData, setFormData }) {
     }));
   };
   return (
-    <div>
+    <div className="general_container">
       <form>
-        <input
+        <div className="personal">
+          <input
+            type="text"
+            id="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            placeholder="Name"
+          />
+          <input
+            type="text"
+            id="title"
+            value={formData.title}
+            onChange={handleInputChange}
+            placeholder="e.g Software Developer"
+          />
+        </div>
+
+        <textarea
           type="text"
-          id="name"
-          value={formData.name}
+          id="profile"
           onChange={handleInputChange}
-          placeholder="Name"
+          value={formData.profile}
         />
         <input
           type="text"

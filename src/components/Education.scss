@@ -1,0 +1,18 @@
+
+.education_container {
+    width: 100%;
+}
+
+
+
+.education_container form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    & > input {
+        font-size: 1rem;
+        padding: 5px 10px;
+        }
+
+  
+}

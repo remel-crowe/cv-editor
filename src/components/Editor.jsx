@@ -18,15 +18,16 @@ function Editor({
         <hr></hr>
         <General formData={formData} setFormData={setFormData} />
       </div>
+
+      <div className="work">
+        <h2>Employment</h2>
+        <hr></hr>
+        <Work work={work} setWork={setWork} />
+      </div>
       <div className="education">
         <h2>Education</h2>
         <hr></hr>
         <Education education={education} setEducation={setEducation} />
-      </div>
-      <div className="work">
-        <h2>Exmployment</h2>
-        <hr></hr>
-        <Work work={work} setWork={setWork} />
       </div>
     </div>
   );
